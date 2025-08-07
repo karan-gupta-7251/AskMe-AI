@@ -1,2 +1,3 @@
 AskMe-AI
+
 AskMe AI is a full‑stack AI assistant platform that provides a ChatGPT‑style experience with enhanced features. It allows users to sign up, log in, manage conversation history, and switch between light and dark themes for a personalized interface. Powered by OpenAI GPT‑4o‑mini, it generates real‑time intelligent responses. The project is built using React, raw CSS, Node.js, Express.js, and MongoDB, delivering a responsive, fast, and scalable platform.
