@@ -1,0 +1,71 @@
+:root {
+    --background: #212121;
+    --sidebar-bg: #181818;
+    --text-color: #ececec;
+    --secondary-bg: #323232;
+    --hover-bg: rgba(180, 180, 180, 0.05);
+    --border-color: rgba(255, 255, 255, 0.5);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --scrollbar-track: #212121;
+    --scrollbar-thumb: #21212193;
+    --scrollbar-thumb-hover: #21212193;
+}
+
+[data-theme="light"] {
+    --background: #f4f4f5;
+    --sidebar-bg: #25242411;
+    --text-color: #1f2937;
+    --secondary-bg: #e5e7eb;
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --border-color: rgba(0, 0, 0, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --scrollbar-track: #e5e7eb;
+    --scrollbar-thumb: #3f3f3f36;
+    --scrollbar-thumb-hover: #3f3f3f36;
+}
+
+* {
+    color: var(--text-color);
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    background-color: var(--background);
+    display: flex;
+    height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.app::-webkit-scrollbar {
+    width: 8px;
+}
+
+.app::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 4px;
+}
+
+.app::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+}
+
+.app::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+@media (max-width: 768px) {
+    .app {
+        flex-direction: column; /* Stack sidebar and chat on mobile */
+    }
+}

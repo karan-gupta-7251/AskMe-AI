@@ -1,0 +1,152 @@
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: var(--text-color);
+    height: 100vh;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 0.5px var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.9rem;
+}
+
+.logo {
+    height: 2.1rem;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+[data-theme="light"] .logo {
+    filter: invert(100%); /* White logo in light theme */
+}
+
+[data-theme="dark"] .logo {
+    filter: none;
+}
+
+button span {
+    font-size: 1rem; /* Slightly smaller for mobile */
+}
+
+button:hover {
+    background-color: var(--hover-bg);
+}
+
+.history {
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.history::-webkit-scrollbar {
+    width: 6px; /* Thinner for mobile */
+}
+
+.history::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 4px;
+}
+
+.history::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+}
+
+.history::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+.history li {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 8px 10px;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem; /* Smaller for mobile */
+    border: solid 8px transparent;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.history li:hover {
+    background-color: var(--hover-bg);
+    border-radius: 10px;
+}
+
+.sign {
+    padding: 10px;
+    margin: 10px;
+    font-size: 0.85rem; /* Smaller for mobile */
+    text-align: center;
+    border-top: solid 0.25px var(--border-color);
+}
+
+.fa-trash {
+    opacity: 0;
+    position: absolute;
+    right: 8px;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.9rem;
+}
+
+.history li:hover .fa-trash {
+    opacity: 1;
+    color: var(--text-color);
+}
+
+.fa-trash:hover {
+    color: #f87171 !important;
+}
+
+.highlighted {
+    background-color: var(--hover-bg);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full-width on mobile */
+        height: auto; /* Allow height to adjust */
+        max-height: 30vh; /* Limit height to avoid taking too much space */
+    }
+
+    .logo {
+        height: 1.8rem; /* Smaller logo on mobile */
+    }
+
+    button {
+        padding: 8px; /* Smaller padding for touch */
+        font-size: 0.85rem;
+    }
+
+    .history {
+        max-height: 20vh; /* Limit history height */
+    }
+
+    .history li {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+
+    .sign {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,189 @@
+.chatWindow {
+    background-color: var(--background);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.chatWindow::-webkit-scrollbar {
+    width: 6px; /* Thinner for mobile */
+}
+
+.chatWindow::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 4px;
+}
+
+.chatWindow::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+}
+
+.chatWindow::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.navbarRight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Smaller gap for mobile */
+}
+
+.navbar span {
+    margin: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.userIconDiv {
+    margin: 0.5rem 1rem;
+}
+
+.userIcon {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.userIcon:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Chat input */
+.chatInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.inputBox {
+    width: 100%;
+    position: relative;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+input {
+    width: 100%;
+    border: none;
+    background-color: var(--secondary-bg);
+    padding: 16px;
+    font-size: 0.85rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-color) 0 54px 55px,
+                var(--shadow-color) 0 -12px 30px,
+                var(--shadow-color) 0 4px 6px,
+                var(--shadow-color) 0 12px 3px,
+                var(--shadow-color) 0 -3px 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#submit {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    font-size: 1rem;
+    position: absolute;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submit i:hover {
+    color: var(--text-color);
+}
+
+.info {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Dropdown css */
+.dropDown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw; /* Responsive width */
+    max-width: 300px;
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar span {
+        font-size: 0.85rem;
+        margin: 0.5rem;
+    }
+
+    .userIconDiv {
+        margin: 0.5rem;
+    }
+
+    .inputBox {
+        padding: 0 0.5rem;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+
+    #submit {
+        height: 28px;
+        width: 28px;
+        font-size: 0.9rem;
+        right: 10px;
+    }
+
+    .info {
+        font-size: 0.7rem;
+    }
+
+    .dropDown {
+        padding: 0.75rem;
+        max-height: 70vh;
+    }
+}

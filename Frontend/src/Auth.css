@@ -1,0 +1,210 @@
+.dropDown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: var(--secondary-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+    z-index: 1000;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.dropDown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropDown::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 4px;
+}
+
+.dropDown::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+}
+
+.dropDown::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+.dropDownHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.dropDownTitle {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.dropDownClose {
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.dropDownClose:hover {
+    color: var(--scrollbar-thumb);
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.authToggle {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: var(--background);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.authOption {
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 0.2s ease-in-out;
+}
+
+.authOption.active {
+    color: var(--text-color);
+    background-color: var(--hover-bg);
+    border-radius: 6px;
+}
+
+.authOption:hover {
+    background-color: var(--hover-bg);
+}
+
+.authInput {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background-color: var(--background);
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    border-radius: 8px;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: inset 0 2px 4px var(--shadow-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.authInput:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--scrollbar-thumb);
+}
+
+.authInput::placeholder {
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.authButton {
+    background-color: var(--scrollbar-thumb);
+    border: none;
+    color: var(--text-color);
+    padding: 10px;
+    font-size: 0.85rem;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.authButton:hover {
+    background-color: var(--scrollbar-thumb-hover);
+}
+
+.authButton:active {
+    background-color: var(--scrollbar-thumb);
+}
+
+.error {
+    color: #f87171;
+    font-size: 0.75rem;
+    text-align: center;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0.5rem 0;
+}
+
+.dropDownItem {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    color: var(--text-color);
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.dropDownItem:hover {
+    background-color: var(--hover-bg);
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .dropDown {
+        padding: 0.75rem;
+        max-height: 70vh;
+    }
+
+    .dropDownTitle {
+        font-size: 0.9rem;
+    }
+
+    .dropDownClose {
+        font-size: 0.9rem;
+    }
+
+    .authToggle {
+        padding: 0.4rem;
+    }
+
+    .authOption {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .authInput {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .authButton {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .error {
+        font-size: 0.7rem;
+    }
+
+    .dropDownItem {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+    }
+}

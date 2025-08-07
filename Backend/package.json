@@ -1,0 +1,16 @@
+{
+    "name": "askme-ai-backend",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "bcrypt": "^6.0.0",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.21.2",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^7.0.0",
+        "openai": "^4.0.0"
+    }
+}

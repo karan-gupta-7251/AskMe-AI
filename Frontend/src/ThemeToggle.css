@@ -1,0 +1,38 @@
+.themeToggle {
+    background-color: var(--scrollbar-thumb);
+    border: none;
+    color: var(--text-color);
+    padding: 10px;
+    font-size: 0.85rem;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.themeToggle:hover {
+    background-color: var(--scrollbar-thumb-hover);
+}
+
+.themeToggle:active {
+    background-color: var(--scrollbar-thumb);
+}
+
+.themeToggle i {
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .themeToggle {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .themeToggle i {
+        font-size: 0.8rem;
+    }
+}

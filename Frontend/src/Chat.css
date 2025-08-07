@@ -1,0 +1,100 @@
+.chats {
+    max-width: 700px;
+    width: 100%; /* Full-width on mobile */
+    height: 100%;
+    overflow-y: auto;
+    padding: 1.5rem 1.5rem 6rem 1.5rem; /* Reduced padding for mobile */
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    background-color: var(--background);
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.chats::-webkit-scrollbar {
+    width: 6px; /* Thinner for mobile */
+}
+
+.chats::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 4px;
+}
+
+.chats::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+}
+
+.chats::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+.userDiv {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.85rem; /* Smaller for mobile */
+    margin-bottom: 1rem;
+}
+
+.gptDiv {
+    text-align: left;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.userMessage {
+    background-color: var(--secondary-bg);
+    padding: 10px 16px; /* Smaller padding for mobile */
+    border-radius: 12px;
+    margin-left: 1.5rem;
+    max-width: 85%; /* Slightly wider on mobile */
+    width: fit-content;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    transition: transform 0.2s ease-in-out;
+}
+
+.userMessage:hover {
+    transform: translateY(-2px);
+}
+
+.hljs {
+    border-radius: 12px !important;
+    background-color: var(--background);
+    padding: 10px 16px;
+    max-width: 85%;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.2s ease-in-out;
+}
+
+.hljs:hover {
+    transform: translateY(-2px);
+}
+
+pre {
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .chats {
+        padding: 1rem 1rem 5rem 1rem; /* Further reduced for mobile */
+        border-radius: 8px;
+    }
+
+    .userMessage {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        max-width: 90%;
+    }
+
+    .hljs {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        max-width: 90%;
+    }
+}
